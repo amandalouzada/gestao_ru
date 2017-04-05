@@ -1,2 +1,3 @@
-# gestao_ru
-Aplicação de gestão para restaurantes universitários
+# Gestão de RU
+Aplicação desenvolvida usando Angular para gestão de restaurantes universitários
+
