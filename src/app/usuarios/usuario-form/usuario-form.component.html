@@ -1,0 +1,62 @@
+<div class="container">
+  <h4>{{title}}</h4>
+  <form materialize class="col s12" [formGroup]="formUsuario" (ngSubmit)="salvar()">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="nome" type="text" class="validate" [(ngModel)]="usuario.nome" formControlName="nome">
+        <label for="name" [class.active]="usuario.nome" data-error="Nome muito curto">
+          Nome
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">email</i>
+        <input id="email" type="email" class="validate" [(ngModel)]="usuario.email" formControlName="email">
+        <label for="email" [class.active]="usuario.email" data-error="Email invalido">
+          Email
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="matricula" type="text" class="validate" [(ngModel)]="usuario.matricula" formControlName="matricula">
+        <label for="matricula" [class.active]="usuario.matricula" data-error="Matricula muito curta">
+          Matricula
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="cpf" type="text" class="validate" [(ngModel)]="usuario.cpf" formControlName="cpf">
+        <label for="cpf" [class.active]="usuario.cpf" data-error="CPF muito curto">
+          CPF
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">credit_card</i>
+        <input id="cartaoRFID" type="text" class="validate" [(ngModel)]="usuario.cartaoRFID" formControlName="cartaoRFID">
+        <label for="cartaoRFID" [class.active]="usuario.cartaoRFID" data-error="Número invalido">
+          Número Carterinha
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <select materialize="material_select" formControlName="classe" [(ngModel)]="usuario.classe.id">
+          <option *ngFor="let classe of classes" value="{{classe.id}}">{{classe.nome}}</option>
+        </select>
+        <label>Classe</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button type="submit" class="btn waves-effect waves-light">Salvar</button>
+        <a routerLink="/usuarios" class="btn waves-effect waves-light">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>

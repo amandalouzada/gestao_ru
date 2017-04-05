@@ -1,0 +1,35 @@
+<div class="container">
+  <h4>{{title}}</h4>
+  <form materialize class="col s12" [formGroup]="formClasse" (ngSubmit)="salvar()">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nome" type="text" class="validate" [(ngModel)]="classe.nome" formControlName="nome">
+        <label for="name" [class.active]="classe.nome" data-error="Nome muito curto">
+          Nome
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="desconto" type="text" class="validate" [(ngModel)]="classe.desconto" formControlName="desconto">
+        <label for="desconto" [class.active]="classe.desconto">
+          Desconto
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="descricao" type="text" class="validate" [(ngModel)]="classe.descricao" formControlName="descricao">
+        <label for="descricao" [class.active]="classe.descricao" data-error="Matricula muito curta">
+          Descrição
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button type="submit" class="btn waves-effect waves-light">Salvar</button>
+        <a routerLink="/classes" class="btn waves-effect waves-light">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>
