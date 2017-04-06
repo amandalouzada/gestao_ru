@@ -1,0 +1,44 @@
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-light red" routerLink="novo"><i class="material-icons">add</i></a>
+</div>
+<div class="row">
+  <div class="col s12">
+    <p>
+      Classes
+    </p>
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th> Nome</th>
+          <th> Desconto %</th>
+          <th> Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let classe of classes">
+          <td>
+            <a [routerLink]="['/classes', classe.id]">
+                {{ classe.nome }}
+            </a>
+          </td>
+          <td>
+            {{ classe.desconto }}
+          </td>
+          <td>
+            {{ classe.descricao }}
+          </td>
+          <td>
+            <a [routerLink]="['/classes', classe.id]">
+              <i class="material-icons">mode_edit</i>
+            </a>
+          </td>
+          <td>
+            <a (click)="deletarClasse(classe)">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

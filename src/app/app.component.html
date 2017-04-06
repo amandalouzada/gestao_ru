@@ -1,3 +1,55 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <nav class="nav-fixed teal lighten-1">
+    <div class="nav-wrapper">
+      <a materialize="sideNav" [materializeParams]="[{menuWidth:'240'}]" href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">menu</i>
+      </a>
+      <a routerLink="" class="brand-logo right">Gestão RU</a>
+      <ul class="left hide-on-med-and-down">
+        <li routerLinkActive="active"><a routerLink="login">Login</a></li>
+        <li routerLinkActive="active"><a routerLink="/usuario">Usuários</a></li>
+        <li routerLinkActive="active"><a routerLink="/classes">Classes</a></li>
+        <li routerLinkActive="active"><a routerLink="/refeicoes">Refeições</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul id="slide-out" class="side-nav fixed grey darken-4">
+    <h5 class="white-text">Sistema de Gestão RU</h5>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li class="white-text">
+        <div class="collapsible-header"><i class="material-icons">monetization_on</i>Financeiro</div>
+        <div class="collapsible-body grey darken-4">
+          <li><a class="white-text" routerLink="/financeiro">Buscar</a></li>
+          <li><a class="white-text" routerLink="/financeiro/novo">Cadastrar</a></li>
+        </div>
+      </li>
+      <li class="white-text">
+        <div class="collapsible-header"><i class="material-icons">account_circle</i>Usuários</div>
+        <div class="collapsible-body grey darken-4">
+          <li><a class="white-text" routerLink="/usuarios">Buscar</a></li>
+          <li><a class="white-text" routerLink="/usuarios/novo">Cadastrar</a></li>
+        </div>
+      </li>
+      <li class="white-text">
+        <div class="collapsible-header"><i class="material-icons">group</i>Classes</div>
+        <div class="collapsible-body grey darken-4">
+          <li><a class="white-text" routerLink="/classes">Buscar</a></li>
+          <li><a class="white-text" routerLink="/classes/novo">Cadastrar</a></li>
+        </div>
+      </li>
+      <li class="white-text">
+        <div class="collapsible-header"><i class="material-icons">local_dining</i>Refeições</div>
+        <div class="collapsible-body grey darken-4">
+          <li><a class="white-text" routerLink="/refeicoes">Buscar</a></li>
+          <li><a class="white-text" routerLink="/refeicoesnovo">Cadastrar</a></li>
+        </div>
+      </li>
+    </ul>
+  </ul>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+</footer>
