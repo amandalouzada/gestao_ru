@@ -46,7 +46,7 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <select materialize="material_select" formControlName="classe" [(ngModel)]="usuario.classe.id">
+        <select materialize="material_select" [(ngModel)]="classe" [ngModelOptions]="{standalone: true}">
           <option *ngFor="let classe of classes" value="{{classe.id}}">{{classe.nome}}</option>
         </select>
         <label>Classe</label>

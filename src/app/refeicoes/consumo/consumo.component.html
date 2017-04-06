@@ -1,0 +1,38 @@
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-light red" routerLink="novo"><i class="material-icons">add</i></a>
+</div>
+<div class="row">
+  <div class="col s12">
+    <p>
+      Refeicoes realizadas
+    </p>
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th> Número</th>
+          <th> Horário</th>
+          <th> Usuário</th>
+          <th> Classe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let consumo of consumos">
+          <td>
+            <a [routerLink]="['/refeicoes/consumo', consumo.id]">
+                {{ consumo.id }}
+            </a>
+          </td>
+          <td>
+            {{ consumo.horario | date:'dd-MM-yyyy HH:MM:ss' }}
+          </td>
+          <td>
+            {{ consumo.usuario_id}}
+          </td>
+          <td>
+            {{ consumo.classe_id}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

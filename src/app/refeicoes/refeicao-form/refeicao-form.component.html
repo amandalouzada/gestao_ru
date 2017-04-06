@@ -1,0 +1,35 @@
+<div class="container">
+  <h4>{{title}}</h4>
+  <form materialize class="col s12" [formGroup]="formRefeicao" (ngSubmit)="salvar()">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nome" type="text" class="validate" [(ngModel)]="refeicao.nome" formControlName="nome">
+        <label for="name" [class.active]="refeicao.nome" data-error="Nome muito curto">
+          Nome
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="periodo" type="text" class="validate" [(ngModel)]="refeicao.periodo" formControlName="periodo">
+        <label for="periodo" [class.active]="refeicao.periodo">
+          Periodo
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="preco" type="text" class="validate" [(ngModel)]="refeicao.preco" formControlName="preco">
+        <label for="preco" [class.active]="refeicao.preco" data-error="Matricula muito curta">
+          Preco
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button type="submit" class="btn waves-effect waves-light">Salvar</button>
+        <a routerLink="/refeicoes" class="btn waves-effect waves-light">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>

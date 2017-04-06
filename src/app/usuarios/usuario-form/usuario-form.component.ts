@@ -22,6 +22,7 @@ export class UsuarioFormComponent implements OnInit {
   formUsuario: FormGroup;
   usuario: Usuario = new Usuario();
   classes: Array<Classe> = [];
+  classe: number;
 
   constructor(private usuariosService: UsuariosService,
     private router: Router,
@@ -60,10 +61,10 @@ export class UsuarioFormComponent implements OnInit {
   salvar() {
     var result,
       usuarioValue = this.formUsuario.value;
-      usuarioValue.classe = this.classesService.getClasse(this.formUsuario.value.classe);
+      usuarioValue.classe = this.classesService.getClasse(this.classe);
 
 
-    if (this.usuario) {
+    if (this.usuario.id) {
       result = this.usuarioService.atualizaUsuario(usuarioValue);
     } else {
       result = this.usuarioService.addUsuario(usuarioValue);

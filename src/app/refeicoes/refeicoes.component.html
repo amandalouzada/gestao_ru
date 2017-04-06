@@ -1,3 +1,44 @@
-<h2>
-  refeicoes works!
-</h2>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-light red" routerLink="novo"><i class="material-icons">add</i></a>
+</div>
+<div class="row">
+  <div class="col s12">
+    <p>
+      Refeicoes
+    </p>
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th> Nome</th>
+          <th> Periodo</th>
+          <th> Preco</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let refeicao of refeicoes">
+          <td>
+            <a [routerLink]="['/refeicoes', refeicao.id]">
+                {{ refeicao.nome }}
+            </a>
+          </td>
+          <td>
+            {{ refeicao.periodo }}
+          </td>
+          <td>
+            {{ refeicao.preco }}
+          </td>
+          <td>
+            <a [routerLink]="['/refeicoes', refeicao.id]">
+              <i class="material-icons">mode_edit</i>
+            </a>
+          </td>
+          <td>
+            <a (click)="deletarRefeicao(refeicao)">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
