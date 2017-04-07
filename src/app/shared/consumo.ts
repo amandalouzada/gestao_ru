@@ -9,4 +9,5 @@ export class Consumo {
   tipo_refeicao: Item;
   usuario: Item;
   classe: Item;
+  valor: number
 }

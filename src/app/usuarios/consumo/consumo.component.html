@@ -18,7 +18,7 @@
             {{ consumo.horario | date:'dd-MM-yyyy HH:MM:ss' }}
           </td>
           <td>
-            R$
+            R$ {{ consumo.valor | number : '2.2-2'}}
           </td>
           <td>
             {{ consumo.tipo_refeicao.nome}}
