@@ -10,6 +10,7 @@ import { ClassesService } from '../classes/classes.service';
 
 import { UsuariosComponent } from './usuarios.component';
 import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
+import { ConsumoComponent } from './consumo/consumo.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
   declarations: [
     UsuariosComponent,
     UsuarioFormComponent,
+    ConsumoComponent,
   ],
   exports: [
     UsuariosComponent,

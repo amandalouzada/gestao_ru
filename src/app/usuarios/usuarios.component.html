@@ -47,6 +47,11 @@
             </a>
           </td>
           <td>
+            <a [routerLink]="['/usuarioConsumo', usuario.id]">
+              <i class="material-icons">monetization_on</i>
+            </a>
+          </td>
+          <td>
             <a (click)="deletarUsuario(usuario)">
               <i class="material-icons">delete</i>
             </a>

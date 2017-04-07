@@ -7,7 +7,10 @@ import { MaterializeModule } from 'angular2-materialize';
 import { RefeicaoFormComponent } from './refeicao-form/refeicao-form.component';
 import { RefeicoesService } from "../refeicoes/refeicoes.service";
 import { ConsumoService } from '../shared/consumo.service';
+import { ClassesService } from '../classes/classes.service';
 import { ConsumoComponent } from './consumo/consumo.component';
+import { ConsumoDiarioComponent } from './consumo-diario/consumo-diario.component';
+import { ConsumoMensalComponent } from './consumo-mensal/consumo-mensal.component';
 
 
 
@@ -22,14 +25,17 @@ import { ConsumoComponent } from './consumo/consumo.component';
   ],
   declarations: [
    RefeicaoFormComponent,
-   ConsumoComponent
+   ConsumoComponent,
+   ConsumoDiarioComponent,
+   ConsumoMensalComponent
  ],
   exports: [
 
   ],
   providers: [
     RefeicoesService,
-    ConsumoService
+    ConsumoService,
+    ClassesService
   ]
 })
 export class RefeicoesModule { }

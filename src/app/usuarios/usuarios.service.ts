@@ -13,9 +13,12 @@ export class UsuariosService {
   constructor() { }
 
   private usuarios: Usuario[] = [
-    { id: 1, nome: 'Usuário 01', email: 'usuario01@email.com', senha: '123456', cpf: '00000000001', matricula: '2017110001', cartaoRFID:'123', classe: { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' } },
-    { id: 2, nome: 'Usuário 02', email: 'usuario02@email.com', senha: '123456', cpf: '00000000002', matricula: '2017110002', cartaoRFID:'122', classe: { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' } },
-    { id: 3, nome: 'Usuário 03', email: 'usuario03@email.com', senha: '123456', cpf: '00000000003', matricula: '2017110003', cartaoRFID:'124', classe: { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' } }
+    { id: 1, nome: 'José Preguiçoso', email: 'jose@email.com', senha: '123456', cpf: '00000000011', matricula: '2017110011', cartaoRFID:'121', classe: { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' } },
+    { id: 2, nome: 'João Estudioso', email: 'joao@email.com', senha: '123456', cpf: '00000000010', matricula: '2017110011', cartaoRFID:'121', classe: { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' } },
+    { id: 3, nome: 'Maria Estudiosa', email: 'maria@email.com', senha: '123456', cpf: '00000000001', matricula: '2017110010', cartaoRFID:'120', classe: { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' } },
+    { id: 4, nome: 'Magali da Silva', email: 'magali@email.com', senha: '123456', cpf: '00000000002', matricula: '2017110002', cartaoRFID:'122', classe: { id: 2, nome: 'Estudante 50%', desconto: 50, descricao: 'Estudante contemplado com desconto de 50%' }},
+    { id: 5, nome: 'Cebolinha da Silva', email: 'cebolinha@email.com', senha: '123456', cpf: '00000000003', matricula: '2017110003', cartaoRFID:'124', classe: { id: 3, nome: 'Estudante 100%', desconto: 100, descricao: 'Estudante contemplado com desconto de 100%' }},
+    { id: 6, nome: 'Edeilson Nota 10', email: 'usuario04@email.com', senha: '123456', cpf: '00000000004', matricula: '2017110004', cartaoRFID:'125', classe: { id: 4, nome: 'Técnico', desconto: 20 , descricao: 'Técnico' }}
   ];
 
   getUsuarios() {

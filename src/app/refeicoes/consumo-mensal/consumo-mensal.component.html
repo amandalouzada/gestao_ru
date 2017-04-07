@@ -4,26 +4,6 @@
       Refeicoes realizadas
     </p>
     <div class="row">
-      <div class="input-field col s4">
-        <input id="nome" type="text" class="validate" [(ngModel)]="usuario">
-        <label for="name" data-error="Nome muito curto">
-          Usuário
-        </label>
-      </div>
-        <div class="input-field col s3">
-          <select materialize="material_select" [(ngModel)]="classe">
-            <option></option>
-            <option *ngFor="let classe of classes" value="{{classe.id}}">{{classe.nome}}</option>
-          </select>
-          <label>Classes</label>
-        </div>
-        <div class="input-field col s3">
-          <select materialize="material_select" [(ngModel)]="refeicao">
-            <option></option>
-            <option *ngFor="let refeicao of refeicoes" value="{{refeicao.id}}">{{refeicao.nome}}</option>
-          </select>
-          <label>Tipo Refeição</label>
-        </div>
       <div class="col s2">
         <button class="waves-effect waves-light btn" (click)="buscarConsumo()"><i class="material-icons left">search</i></button>
       </div>

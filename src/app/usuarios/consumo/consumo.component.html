@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col s12">
+    <h4>
+      {{usuario.nome}}
+    </h4>
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th> Horário</th>
+          <th> Valor</th>
+          <th> Tipo da Refeição</th>
+          <th> Classe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let consumo of consumos">
+          <td>
+            {{ consumo.horario | date:'dd-MM-yyyy HH:MM:ss' }}
+          </td>
+          <td>
+            R$
+          </td>
+          <td>
+            {{ consumo.tipo_refeicao.nome}}
+          </td>
+          <td>
+            {{ consumo.classe.nome}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -14,7 +14,9 @@ export class ClassesService {
 
   private classes: Classe[] = [
     { id: 1, nome: 'Estudante', desconto: 75, descricao: 'Estudante' },
-    { id: 2, nome: 'Técnico', desconto: 20 , descricao: 'Técnico' }
+    { id: 2, nome: 'Estudante 50%', desconto: 50, descricao: 'Estudante contemplado com desconto de 50%' },
+    { id: 3, nome: 'Estudante 100%', desconto: 100, descricao: 'Estudante contemplado com desconto de 100%' },
+    { id: 4, nome: 'Técnico', desconto: 20 , descricao: 'Técnico' }
   ];
 
   getClasses() {
