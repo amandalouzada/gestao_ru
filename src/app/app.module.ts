@@ -10,6 +10,7 @@ import { RefeicoesModule } from "app/refeicoes/refeicoes.module";
 import { refeicoesRouting } from "app/refeicoes/refeicoes.routing"
 import { usuariosRouting } from './usuarios/usuarios.routing';
 import { UsuariosModule } from "app/usuarios/usuarios.module";
+import { AuthService } from "app/shared/auth.service";
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -40,8 +41,11 @@ import { CartaoComponent } from './cartao/cartao.component';
     classesRouting,
     refeicoesRouting,
     routing,
+
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

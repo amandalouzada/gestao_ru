@@ -1,5 +1,5 @@
 <header>
-  <nav class="nav-fixed teal lighten-1">
+  <nav class="nav-fixed teal lighten-1" *ngIf="mostrarMenu">
     <div class="nav-wrapper">
       <a materialize="sideNav" [materializeParams]="[{menuWidth:'240'}]" href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
         <i class="material-icons">menu</i>
@@ -7,7 +7,7 @@
       <a routerLink="" class="brand-logo right">Gestão RU</a>
     </div>
   </nav>
-  <ul id="slide-out" class="side-nav fixed grey darken-4">
+  <ul id="slide-out" class="side-nav fixed grey darken-4"  *ngIf="mostrarMenu" >
     <h5 class="white-text logo">Sistema de Gestão RU</h5>
     <ul class="collapsible" data-collapsible="accordion">
       <li class="white-text">
